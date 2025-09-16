@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+
+    /* Gold theme */
+    --primary: 45 100% 47%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 160 84% 39%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 45 10% 96.1%;
+    --muted-foreground: 240 5% 34%;
+
+    --accent: 45 100% 90%;
+    --accent-foreground: 45 100% 10%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 45 5% 90%;
+    --input: 45 5% 90%;
+    --ring: 45 100% 47%;
+    --radius: 0.5rem;
+
+    --sidebar-background: 45 100% 98%;
+    --sidebar-foreground: 45 5% 26.1%;
+    --sidebar-primary: 45 100% 47%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 45 100% 95%;
+    --sidebar-accent-foreground: 45 100% 10%;
+    --sidebar-border: 45 10% 90%;
+    --sidebar-ring: 45 100% 47%;
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    /* Gold theme in dark mode */
+    --primary: 45 100% 57%;
+    --primary-foreground: 240 10% 3.9%;
+
+    --secondary: 160 84% 39%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 84.9%;
+
+    --accent: 45 100% 20%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 45 100% 57%;
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 45 100% 57%;
+    --sidebar-primary-foreground: 240 5.9% 10%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 45 100% 57%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.gold-gradient {
+  background: linear-gradient(135deg, #ffd700 0%, #ffc107 100%);
+}
+
+.emerald-gradient {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+}
+
+.gold-text-gradient {
+  @apply text-gold-700 dark:text-gold-500;
+  background-clip: text;
+}
+
+.shimmer {
+  @apply relative overflow-hidden before:absolute before:inset-0 before:-translate-x-full before:animate-shimmer before:bg-gradient-to-r before:from-transparent before:via-white/20 before:to-transparent;
+}
+
